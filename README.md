@@ -22,7 +22,7 @@
 ## :computer: Запуск тестов из терминала
 ```bash
 pytest tests/test_reqres.py --env=prod
-pytest tests/test_demoshop.py --env=prod
+pytest tests/test_demoshop.py --env=prod 
 ```
 
 В проекте используется встроенный logger - logging:
