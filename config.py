@@ -6,11 +6,11 @@ class Hosts:
     def __init__(self, env):
         self.demoqa = {
             'local': 'localhost:5555',
-            'dev': 'http://dev_demowebshop.com',
+            'test': 'http://your_test_demoqa_env.com',
             'prod': 'https://demowebshop.tricentis.com/',
         }[env]
         self.reqres = {
             'local': 'localhost:5555',
-            'dev': 'http://dev_reqres.in/',
+            'test': 'http://your_test_env.com/',
             'prod': 'https://reqres.in/',
         }[env]

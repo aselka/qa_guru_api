@@ -2,7 +2,7 @@ import os
 import pytest
 from dotenv import load_dotenv
 from selene.support.shared import browser
-from framework import demoqa_with_env
+from framework.demoqa_with_env import DemoQaWithEnv
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from utils import attachments
@@ -21,7 +21,7 @@ def env(request):
 
 @pytest.fixture(scope='session')
 def demoshop(env):
-    return demoqa_with_env(env)
+    return DemoQaWithEnv(env)
 
 
 @pytest.fixture(scope='session')
@@ -64,4 +64,4 @@ def app(demoshop, cookie):
 
 @pytest.fixture(scope='session')
 def reqres(env):
-    return demoqa_with_env(env).reqres
+    return DemoQaWithEnv(env).reqres
