@@ -12,7 +12,7 @@
   <code><img width="5%" title="Allure Report" src="./attachments/logo/allure_report.png"></code>
   <code><img width="5%" title="Jenkins" src="./attachments/logo/jenkins.png"></code>
   <code><img width="5%" title="Requests" src="./attachments/logo/requests.png"></code>
-  <code><img width="5%" title="Requests" src="./attachments/logo/tg.png"></code>
+  <code><img width="5%" title="Telegram" src="./attachments/logo/tg.png"></code>
 </p>
 
 ### Что выполняет тест:
