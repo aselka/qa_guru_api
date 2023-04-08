@@ -1,6 +1,6 @@
 import json
 from json import JSONDecodeError
-
+import logging
 import allure
 from allure_commons.types import AttachmentType
 from requests import Session, Response
@@ -29,6 +29,14 @@ def allure_logger(function):
 
     return wrapper
 
+def request_logging(func):
+    def wrapper(*args, **kwargs):
+        response: Response = func(*args, **kwargs)
+        logging.info(f"status code is {response.status_code} - {to_curl(response.request)}")
+
+        return response
+
+    return wrapper
 
 class BaseSession(Session):
     def __init__(self, url):
@@ -36,6 +44,7 @@ class BaseSession(Session):
         self.url = url
 
     @allure_logger
+    @request_logging
     def request(self, method, url, **kwargs) -> Response:
         response = super().request(method, self.url + url, **kwargs)
         return response
