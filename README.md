@@ -12,6 +12,8 @@
   <code><img width="5%" title="Allure Report" src="./attachments/logo/allure_report.png"></code>
   <code><img width="5%" title="Jenkins" src="./attachments/logo/jenkins.png"></code>
   <code><img width="5%" title="Requests" src="./attachments/logo/requests.png"></code>
+  <code><img width="5%" title="Allure TestOps" src="./attachments/logo/allure_testops.png"></code>
+  <code><img width="5%" title="Jira" src="./attachments/logo/jira.png"></code>
   <code><img width="5%" title="Telegram" src="./attachments/logo/tg.png"></code>
 </p>
 
@@ -46,6 +48,22 @@ pytest tests/test_demoshop.py --env=prod
 
 ##### Во вкладке Suites находятся подробные данные о прохождении теста с приложенными логами
 ![This is an image](attachments/screenshots/suites.png)
+
+<!-- Allure testOps -->
+### <img width="3%" title="Allure TestOps" src="attachments/logo/allure_testops.png"> Allure TestOps
+
+##### Также настроена интеграция с Allure TestOps. После запуска тестов из Jenkins автоматически создается запуск в Allure TestOps. 
+![This is an image](attachments/screenshots/testops1.png)
+
+##### Есть возможность выбрать нужные джобы из вкладки и запускать их (без посещения Jenkins)
+![This is an image](attachments/screenshots/jobs1.png)
+
+<!-- Jira -->
+
+### <img width="3%" title="Allure TestOps" src="attachments/logo/jira.png"> Jira
+
+##### Настроена интеграция с баг-трекинговой системой Jira
+![This is an image](attachments/screenshots/jira1.png)
 
 <!-- Telegram -->
 
