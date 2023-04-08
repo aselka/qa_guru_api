@@ -12,6 +12,7 @@
   <code><img width="5%" title="Allure Report" src="./attachments/logo/allure_report.png"></code>
   <code><img width="5%" title="Jenkins" src="./attachments/logo/jenkins.png"></code>
   <code><img width="5%" title="Requests" src="./attachments/logo/requests.png"></code>
+  <code><img width="5%" title="Requests" src="./attachments/logo/tg.png"></code>
 </p>
 
 ### Что выполняет тест:
@@ -44,3 +45,12 @@ pytest tests/test_reqres.py --env=prod
 
 ##### Во вкладке Suites находятся подробные данные о прохождении теста с приложенными логами
 ![This is an image](attachments/screenshots/suites.png)
+
+<!-- Telegram -->
+
+### <img width="3%" title="Telegram" src="attachments/logo/tg.png"> Telegram
+
+##### Настроила телеграм-бота, после прохождения тестов в Jenkins присылает уведомление с отчетом в Телеграм
+
+##### Скриншот отчета в телеграм
+![This is an image](attachments/screenshots/telegram1.png)
