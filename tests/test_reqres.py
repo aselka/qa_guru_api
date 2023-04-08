@@ -1,7 +1,11 @@
 from pytest_voluptuous import S
 from schemas.schemas import *
+import allure
 
 
+@allure.story('Reqres.in tests')
+@allure.feature('User')
+@allure.title("User create")
 def test_create_user(reqres):
     created_user = reqres.post("api/users", {"name": "Asel", "job": "QA"})
 
@@ -11,6 +15,9 @@ def test_create_user(reqres):
     assert created_user.json()["job"] == "QA"
 
 
+@allure.story('Reqres.in tests')
+@allure.feature('User')
+@allure.title("User update")
 def test_update_user(reqres):
     update_user = reqres.put("api/users/2", {"name": "bisengalieva", "job": "tester"})
 
@@ -20,12 +27,18 @@ def test_update_user(reqres):
     assert update_user.json()["job"] == "tester"
 
 
+@allure.story('Reqres.in tests')
+@allure.feature('User')
+@allure.title("User delete")
 def test_delete_user(reqres):
     delete_user = reqres.delete("api/users/2")
 
     assert delete_user.status_code == 204
 
 
+@allure.story('Reqres.in tests')
+@allure.feature('User')
+@allure.title("User register successful")
 def test_login_successful(reqres):
     login_successfully = reqres.post("api/register", {"email": "eve.holt@reqres.in", "password": "pistol"})
 
@@ -35,6 +48,9 @@ def test_login_successful(reqres):
     assert login_successfully.json()["token"]
 
 
+@allure.story('Reqres.in tests')
+@allure.feature('User')
+@allure.title("User register unsuccessful")
 def test_login_unsuccessful(reqres):
     login_unsuccessful = reqres.post("api/register", {"email": "neit.@f"})
 
