@@ -22,6 +22,7 @@
 ## :computer: Запуск тестов из терминала
 ```bash
 pytest tests/test_reqres.py --env=prod
+pytest tests/test_demoshop.py --env=prod
 ```
 
 В проекте используется встроенный logger - logging:
@@ -50,7 +51,7 @@ pytest tests/test_reqres.py --env=prod
 
 ### <img width="3%" title="Telegram" src="attachments/logo/tg.png"> Telegram
 
-##### Настроила телеграм-бота, после прохождения тестов в Jenkins присылает уведомление с отчетом в Телеграм
+##### Настроен телеграм-бот, после прохождения тестов в Jenkins присылает уведомление с отчетом в Телеграм
 
 ##### Скриншот отчета в телеграм
 ![This is an image](attachments/screenshots/telegram1.png)
