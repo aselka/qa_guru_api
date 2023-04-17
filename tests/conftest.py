@@ -59,7 +59,6 @@ def app(demoshop, cookie):
     attachments.add_logs(browser)
     attachments.add_video(browser)
     browser.quit()
-    browser.quit()
 
 
 @pytest.fixture(scope='session')
