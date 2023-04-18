@@ -43,10 +43,11 @@ def app(demoshop, cookie):
         }
     }
     options.capabilities.update(selenoid_capabilities)
+    login = os.getenv('LOGIN_SELENOID')
+    password = os.getenv('PASSWORD_SELENOID')
     driver = webdriver.Remote(
-        command_executor="https://user1:1234@selenoid.autotests.cloud/wd/hub",
-        options=options
-    )
+        command_executor=f"https://{login}:{password}@selenoid.autotests.cloud/wd/hub",
+        options=options)
     browser.config.driver = driver
     browser.config.base_url = demoshop.demoqa.url
     browser.config.window_width = 1920
